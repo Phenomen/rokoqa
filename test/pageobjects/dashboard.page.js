@@ -22,12 +22,12 @@ var formPage = Object.create(page, {
 		blueButton:     					{ get: function () { return $('.btn.blue'); } },
 		backButton:     					{ get: function () { return $('.filter .back-btn'); } },
 
-		//Edit Segment
+		//Segments
 		segmentNameInput:					{ get: function () { return $('.main-section div:nth-child(1) input'); } },
 		segmentPropertyA1:				{ get: function () { return $('.col.filter-type-col dropdown-v2 input[type="text"]'); } },
-		segmentPropertyA2:				{ get: function () { return $('.col.filter-col div:nth-child(1) dropdown-v2 input[type="text"]'); } },
-		segmentPropertyA3:				{ get: function () { return $('.col.filter-col div:nth-child(2) dropdown-v2 input[type="text"]'); } },
-		segmentPropertyA4:				{ get: function () { return $('.col.filter-col div:nth-child(3) dropdown-v2 input[type="text"]'); } },
+		segmentPropertyA2:				{ get: function () { return $('.col.filter-col div:nth-child(1) input[type="text"]'); } },
+		segmentPropertyA3:				{ get: function () { return $('.col.filter-col div:nth-child(2) input[type="text"]'); } },
+		segmentPropertyA4:				{ get: function () { return $('.col.filter-col div:nth-child(3) input[type="text"]'); } },
     segmentPropertyA4A:				{ get: function () { return $('li.option span'); } },
 		segmentEdit:							{ get: function () { return $('.page-top-actions .buttons .btn.empty'); } },
 		segmentDelete:						{ get: function () { return $('.page-top-actions .buttons .btn.red'); } },
@@ -35,6 +35,13 @@ var formPage = Object.create(page, {
 		segmentFirstRow:					{ get: function () { return $('.grid div:nth-of-type(2) div:nth-of-type(2) a'); } },
 		segmentFirstRowP:					{ get: function () { return $('.grid div:nth-of-type(2) div:nth-of-type(2) a'); } },
 
+		//Properties
+		propertyName:							{ get: function () { return $('#Name'); } },
+		propertyType:							{ get: function () { return $('div:nth-of-type(2) div:nth-of-type(1) dropdown-v2 div.input-box input'); } },
+		propertyString:							{ get: function () { return $('div:nth-of-type(4) ul li:nth-of-type(1) a'); } },
+		propertyDescription:			{ get: function () { return $('#Description'); } },
+		propertySave:							{ get: function () { return $('.btn.btn-blue'); } },
+		propertyRow:							{ get: function () { return $('span*=Autotest'); } },
 });
 
 module.exports = formPage;

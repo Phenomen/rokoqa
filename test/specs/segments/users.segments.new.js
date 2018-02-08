@@ -1,7 +1,7 @@
 var LoginPage = require("../../pageobjects/login.page");
 var DashboardPage = require("../../pageobjects/dashboard.page");
 
-describe("dashboard - users - segments - editor -", function() {
+describe("dashboard - users - segments - editor", function() {
   it("new segment is created", function() {
     LoginPage.login("user-management/segments-v2/0/edit");
     DashboardPage.segmentNameInput.waitForVisible();

@@ -1,7 +1,7 @@
 var LoginPage = require("../../pageobjects/login.page");
 var DashboardPage = require("../../pageobjects/dashboard.page");
 
-describe("dashboard - users - segments -", function() {
+describe("dashboard - users - segments", function() {
   it("search for segment show correct results", function() {
     LoginPage.login("user-management/segments-v2");
     DashboardPage.searchField.waitForVisible();
@@ -18,7 +18,7 @@ describe("dashboard - users - segments -", function() {
   });
 
   it("deactivate segment button change status of selected segment to inactive", function() {
-    browser.pause(1000);
+    browser.pause(1500);
     DashboardPage.firstCheckbox.click();
     DashboardPage.deactivateButton.waitForVisible();
     DashboardPage.deactivateButton.click();
@@ -27,7 +27,7 @@ describe("dashboard - users - segments -", function() {
   });
 
   it("activate segment button change status of selected segment to active", function() {
-    browser.pause(1000);
+    browser.pause(1500);
     DashboardPage.firstCheckbox.click();
     DashboardPage.activateButton.waitForVisible();
     DashboardPage.activateButton.click();
