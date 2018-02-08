@@ -1,5 +1,4 @@
 var page = require('./page');
-var DashboardPage = require('./dashboard.page');
 
 var formPage = Object.create(page, {
 
@@ -12,6 +11,8 @@ var formPage = Object.create(page, {
 		forgotPasswordReset:      { get: function () { return $('.submit[data-bind="click: sendResetPasswordEmail"]'); } },
 		forgotPasswordSuccess:    { get: function () { return $('.password-reset-message'); } },
 		incorrectCreds:						{ get: function () { return $('.error'); } },
+		//Dashboard
+		rokoTitle:								{ get: function () { return $('.page-title'); } },
 
 
 		open: { value: function() {
@@ -22,12 +23,13 @@ var formPage = Object.create(page, {
 				this.submitButton.click();
 		} },
 
-		login: { value: function() {
+		login: { value: function(section = '') {
 				this.open();
 				this.email.setValue(vRealUsername);
 				this.password.setValue(vRealPassword);
 				this.submit();
-				DashboardPage.rokoTitle.waitForExist();
+				this.rokoTitle.waitForVisible();
+				browser.url(vEnvironment + section);
 		} }
 
 

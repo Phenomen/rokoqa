@@ -1,11 +1,10 @@
 var LoginPage = require("../../pageobjects/login.page");
 var DashboardPage = require("../../pageobjects/dashboard.page");
 
-describe("dashboard users segments create and delete", function() {
+describe("dashboard - users - segments - editor -", function() {
   it("new segment is created", function() {
-    LoginPage.login();
-    browser.url(vEnvironment + "user-management/segments-v2/0/edit");
-    DashboardPage.rokoTitle.waitForVisible();
+    LoginPage.login("user-management/segments-v2/0/edit");
+    DashboardPage.segmentNameInput.waitForVisible();
     DashboardPage.segmentNameInput.setValue("Autotest Segment");
     DashboardPage.segmentPropertyA1.waitForVisible();
     DashboardPage.segmentPropertyA1.setValue("User Property");

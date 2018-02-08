@@ -25,9 +25,7 @@ describe("login page", function() {
 
   it("allow access with correct credentials", function() {
     LoginPage.login();
-    var allCookies = browser.getCookie()
-    console.log(allCookies);
+    DashboardPage.rokoTitle.waitForVisible();
     DashboardPage.rokoTitle.getText().should.exist;
-
   });
 });

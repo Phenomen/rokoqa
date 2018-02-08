@@ -1,10 +1,9 @@
 var LoginPage = require("../../pageobjects/login.page");
 var DashboardPage = require("../../pageobjects/dashboard.page");
 
-describe("dashboard users users", function() {
+describe("dashboard - users - users -", function() {
   it("existing user is found", function() {
-    LoginPage.login();
-    browser.url(vEnvironment + "user-management/users");
+    LoginPage.login("user-management/users");    
     DashboardPage.searchField.waitForVisible();
     DashboardPage.searchField.setValue(vUserExist);
     DashboardPage.searchButton.click();
@@ -27,7 +26,7 @@ describe("dashboard users users", function() {
     DashboardPage.appSelect.click();
     DashboardPage.appMain.waitForVisible();
     DashboardPage.appMain.click();
-    browser.waitUntil(function() { return DashboardPage.filteredUserRow.getText() === vUserMobile }, 5000);
+    DashboardPage.filteredUserRow.waitForVisible();
     DashboardPage.filteredUserRow.getText().should.contain(vUserMobile);
   });
 

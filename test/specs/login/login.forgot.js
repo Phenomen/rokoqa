@@ -1,6 +1,6 @@
 var LoginPage = require("../../pageobjects/login.page");
 
-describe("login page forgot password", function() {
+describe("login page - forgot password -", function() {
   it("error message with non-existing email", function() {
     LoginPage.open();
     LoginPage.forgotPassword.click();

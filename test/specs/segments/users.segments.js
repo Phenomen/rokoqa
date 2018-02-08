@@ -1,10 +1,9 @@
 var LoginPage = require("../../pageobjects/login.page");
 var DashboardPage = require("../../pageobjects/dashboard.page");
 
-describe("dashboard users segments", function() {
+describe("dashboard - users - segments -", function() {
   it("search for segment show correct results", function() {
-    LoginPage.login();
-    browser.url(vEnvironment + "user-management/segments-v2");
+    LoginPage.login("user-management/segments-v2");
     DashboardPage.searchField.waitForVisible();
     DashboardPage.searchField.setValue("Power");
     DashboardPage.searchButton.click();
