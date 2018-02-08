@@ -38,7 +38,7 @@ var formPage = Object.create(page, {
 		//Properties
 		propertyName:							{ get: function () { return $('#Name'); } },
 		propertyType:							{ get: function () { return $('div:nth-of-type(2) div:nth-of-type(1) dropdown-v2 div.input-box input'); } },
-		propertyString:							{ get: function () { return $('div:nth-of-type(4) ul li:nth-of-type(1) a'); } },
+		propertyString:						{ get: function () { return $('div:nth-of-type(4) ul li:nth-of-type(1) a'); } },
 		propertyDescription:			{ get: function () { return $('#Description'); } },
 		propertySave:							{ get: function () { return $('.btn.btn-blue'); } },
 		propertyRow:							{ get: function () { return $('span*=Autotest'); } },

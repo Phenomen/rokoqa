@@ -15,24 +15,29 @@ var formPage = Object.create(page, {
 		rokoTitle:								{ get: function () { return $('.page-title'); } },
 
 
-		open: { value: function() {
-				page.open.call(this, '');
-		} },
+		open: {
+		    value: function() {
+		      page.open.call(this, '');
+		    }
+		  },
 
-		submit: { value: function() {
-				this.submitButton.click();
-		} },
+		  submit: {
+		    value: function() {
+		      this.submitButton.click();
+		    }
+		  },
 
-		login: { value: function(section = '') {
-				this.open();
-				this.email.setValue(vRealUsername);
-				this.password.setValue(vRealPassword);
-				this.submit();
-				this.rokoTitle.waitForVisible();
-				browser.url(vEnvironment + section);
-		} }
+		  login: {
+		    value: function(section = '') {
+		      this.open();
+		      this.email.setValue(vRealUsername);
+		      this.password.setValue(vRealPassword);
+		      this.submit();
+		      this.rokoTitle.waitForVisible();
+		      browser.url(vEnvironment + section);
+		    }
+		  }
 
+		});
 
-});
-
-module.exports = formPage;
+		module.exports = formPage;
