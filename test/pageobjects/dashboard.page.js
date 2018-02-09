@@ -2,6 +2,7 @@ var page = require('./page');
 
 var formPage = Object.create(page, {
 
+		// General
 		rokoTitle:								{ get: function () { return $('.page-header .page-title'); } },
 		pageTitle:								{ get: function () { return $('.page-title .title'); } },
 		searchField:							{ get: function () { return $('.search'); } },
@@ -22,7 +23,7 @@ var formPage = Object.create(page, {
 		blueButton:     					{ get: function () { return $('.btn.blue'); } },
 		backButton:     					{ get: function () { return $('.filter .back-btn'); } },
 
-		//Segments
+		// Segments
 		segmentNameInput:					{ get: function () { return $('.main-section div:nth-child(1) input'); } },
 		segmentPropertyA1:				{ get: function () { return $('.col.filter-type-col dropdown-v2 input[type="text"]'); } },
 		segmentPropertyA2:				{ get: function () { return $('.col.filter-col div:nth-child(1) input[type="text"]'); } },
@@ -35,13 +36,25 @@ var formPage = Object.create(page, {
 		segmentFirstRow:					{ get: function () { return $('.grid div:nth-of-type(2) div:nth-of-type(2) a'); } },
 		segmentFirstRowP:					{ get: function () { return $('.grid div:nth-of-type(2) div:nth-of-type(2) a'); } },
 
-		//Properties
+		// Properties
 		propertyName:							{ get: function () { return $('#Name'); } },
 		propertyType:							{ get: function () { return $('div:nth-of-type(2) div:nth-of-type(1) dropdown-v2 div.input-box input'); } },
 		propertyString:						{ get: function () { return $('div:nth-of-type(4) ul li:nth-of-type(1) a'); } },
 		propertyDescription:			{ get: function () { return $('#Description'); } },
 		propertySave:							{ get: function () { return $('.btn.btn-blue'); } },
 		propertyRow:							{ get: function () { return $('span*=Autotest'); } },
+
+		// Alerts
+		alertRealTimeSwitch: 			{ get: function () { return $('div:nth-of-type(2) > div:nth-of-type(1) > label.toggle-button > div.switch'); } },
+		alertSelectAll:						{ get: function () { return $('div:nth-of-type(2) > label.common-checkbox.small > span.icon'); } },
+  	alertFirstCheckbox:				{ get: function () { return $('div:nth-child(2) > div:nth-child(3) > div > div:nth-child(1) > dropdown-v2:nth-child(2)'); } },
+		alertFirstDropdown: 			{ get: function () { return $('div:nth-of-type(2) > div:nth-of-type(2) > div.conversations > div:nth-of-type(1) > dropdown-v2:nth-of-type(1) > div.input-box.has-options > span'); } },
+		alertFirstDropdownOp1: 		{ get: function () { return $('div:nth-of-type(5) > ul > li:nth-of-type(1) > a > span'); } },
+		alertFirstDropdownOp2:		{ get: function () { return $('span > span'); } },
+		alertSecondDropdown: 			{ get: function () { return $('div:nth-of-type(2) > div:nth-of-type(2) > div.conversations > div:nth-of-type(1) > dropdown-v2:nth-of-type(2) > div.input-box.has-options > span'); } },
+		alertSecondDropdownOp1: 	{ get: function () { return $('div:nth-of-type(6) > ul > li:nth-of-type(1) > a'); } },
+		alertSecondDropdownOp2:		{ get: function () { return $('span > span'); } },
+
 });
 
 module.exports = formPage;
