@@ -44,7 +44,7 @@ exports.config = {
 			//
 			browserName: "chrome", //chrome, phantomjs
 			chromeOptions: {
-				args: ["--window-size=1280,1000"]
+				//args: ["--start-maximized"]
 			}
 		}
 	],

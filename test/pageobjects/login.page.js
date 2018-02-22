@@ -11,9 +11,11 @@ var formPage = Object.create(page, {
 		forgotPasswordReset:      { get: function () { return $('.submit[data-bind="click: sendResetPasswordEmail"]'); } },
 		forgotPasswordSuccess:    { get: function () { return $('.password-reset-message'); } },
 		incorrectCreds:						{ get: function () { return $('.error'); } },
+		companySelector:					{ get: function () { return $('div.companies > div:nth-of-type(2) > span.name'); } },
+
 		//Dashboard
 		rokoTitle:								{ get: function () { return $('.page-title'); } },
-
+		rokoStatus:								{ get: function () { return $('nav.main-nav'); } },
 
 		open: {
 		    value: function() {
@@ -33,7 +35,9 @@ var formPage = Object.create(page, {
 		      this.email.setValue(vRealUsername);
 		      this.password.setValue(vRealPassword);
 		      this.submit();
-		      this.rokoTitle.waitForVisible();
+					this.companySelector.waitForVisible();
+					this.companySelector.click();
+		      this.rokoStatus.waitForVisible();
 		      browser.url(vEnvironment + section);
 		    }
 		  }

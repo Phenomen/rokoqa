@@ -14,8 +14,7 @@ describe("dashboard - users - settings - properties", function() {
     DashboardPage.propertyString.click();
     DashboardPage.propertyDescription.setValue("Autotest Property Description");
     DashboardPage.propertySave.click();
-    DashboardPage.propertyRow.waitForVisible(5000);
-    DashboardPage.propertyRow.getText().should.contain("Autotest");
+
   });
 
   it("property is deleted", function() {

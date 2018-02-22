@@ -57,22 +57,13 @@ var formPage = Object.create(page, {
 
 		// Alerts in conversations
 		alertConvoSwitch:					{ get: function () { return $('label.toggle-button.toggle-button-ellipse > div.switch'); } },
-		alertConvoStatus:					{ get: function () { return $('label.toggle-button'); } },
-		alertConvoDisabled: 			{ get: function () { return $('div.form-groups > div:nth-of-type(2) > div.label.disabled'); } },
+		alertConvoStatus:					{ get: function () { return $('label.toggle-button.toggle-button-ellipse'); } },
+		alertConvoType:						{ get: function () { return $('insta-bot-triggers > div > div > div:nth-child(13) > instabot-triggers-email-settings > div > div > div:nth-child(1) > dropdown-v2 > div > span'); } },
+		alertConvoFreq:				 		{ get: function () { return $('insta-bot-triggers > div > div > div:nth-child(13) > instabot-triggers-email-settings > div > div > div:nth-child(2) > dropdown-v2 > div > span'); } },
 		alertConvoNote:						{ get: function () { return $('div.note'); } },
-		alertConvoDropdown:				{ get: function () { return $('div.form-groups > div:nth-of-type(2) > dropdown-v2 > div.input-box.has-options > span'); } },
-		alertConvoDropdownEvery: 	{ get: function () { return $('ul > li:nth-of-type(2)'); } },
+		alertOptionFirst:					{ get: function () { return $('.option:nth-of-type(1)'); } },
+		alertOptionSecond:				{ get: function () { return $('.option:nth-of-type(2)'); } },
 
-		// Billing
-		billingBlueButton:				{ get: function () { return $('div.page-content.container > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(3) > div.btn.blue'); } },
-		billingName:							{ get: function () { return $('body > div.dialog-overlay.billing-dialog > div > div:nth-child(1) > div.dialog-body > div > div:nth-child(2) > div > input'); } },
-		billingNumber:						{ get: function () { return $('#root > form > span:nth-child(4) > label > input'); } },
-		billingExpiration:				{ get: function () { return $('#root > form > span:nth-child(4) > label > input'); } },
-		billingCVC:								{ get: function () { return $('input[name="cvc"]'); } },
-		billingEmail:							{ get: function () { return $('div.form > div:nth-of-type(4) > div:nth-of-type(1) > input'); } },
-		billingZip:								{ get: function () { return $('input[name="postal"]'); } },
-		billingNotify:						{ get: function () { return $('div.notification-bar.notify-error > div > div.text'); } },
-		billingSubmit:						{ get: function () { return $('div.btn.blue.submit'); } },
 
 });
 
