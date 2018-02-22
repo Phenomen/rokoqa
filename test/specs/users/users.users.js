@@ -7,6 +7,7 @@ describe("dashboard - users - users", function() {
     DashboardPage.searchField.waitForVisible();
     DashboardPage.searchField.setValue(vUserExist);
     DashboardPage.searchButton.click();
+    browser.pause(1000);
     DashboardPage.firstUserRow.getText().should.contain(vUserExist);
   });
 

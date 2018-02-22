@@ -29,7 +29,7 @@ exports.config = {
 	// and 30 processes will get spawned. The property handles how many capabilities
 	// from the same test should run tests.
 	//
-	maxInstances: 10,
+	maxInstances: 5,
 	//
 	// If you have trouble getting all important capabilities together, check out the
 	// Sauce Labs platform configurator - a great tool to configure your capabilities:
@@ -66,7 +66,7 @@ exports.config = {
 	coloredLogs: true,
 	//
 	// Warns when a deprecated command is used
-	deprecationWarnings: true,
+	deprecationWarnings: false,
 	//
 	// If you only want to run your tests until a specific amount of tests have failed use
 	// bail (default is 0 - don't bail, run all tests).
@@ -82,7 +82,7 @@ exports.config = {
 	baseUrl: "https://portal.qa.rokolabs.com",
 	//
 	// Default timeout for all waitFor* commands.
-	waitforTimeout: 60000,
+	waitforTimeout: 90000,
 	//
 	// Default timeout in milliseconds for request
 	// if Selenium Grid doesn't send response
@@ -113,7 +113,7 @@ exports.config = {
 	// Services take over a specific job you don't want to take care of. They enhance
 	// your test setup with almost no effort. Unlike plugins, they don't add new
 	// commands. Instead, they hook themselves up into the test process.
-	services: ["selenium-standalone", "chromedriver"],
+	services: ["selenium-standalone"],
 	//
 	// Framework you want to run your specs with.
 	// The following are supported: Mocha, Jasmine, and Cucumber
@@ -140,7 +140,7 @@ exports.config = {
 	mochaOpts: {
 		ui: "bdd",
 		require: ["./test/helpers/common.js"],
-		timeout: 60000
+		timeout: 90000
 	},
 	//
 	// =====
